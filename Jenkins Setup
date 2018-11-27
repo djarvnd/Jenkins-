@@ -1,0 +1,14 @@
+Jenkins requires Java environment to run
+java & javac
+sudo yum -y install java-1.8.0
+sudo yum -y install java-1.8.0-devel
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum -y install jenkins
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+netstat -ntpl | grep 8080
+Access jenkins on http://ip-address:8080
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Copy the password that's shown in CLI and paste it to move to next step
